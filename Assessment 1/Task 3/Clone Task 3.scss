@@ -1,0 +1,210 @@
+// This is the color pallet
+$c1: #4e89ae;
+$c2: #43658b;
+$c3: #ed6663;
+$c4: #ffa372;
+$h: #8ccff7;
+
+//This centers the items horizontally and vertically
+@mixin align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//This @mixin allows me to add media queries to certain selectors 
+// without having to repeat codes
+@mixin mediaQuery($minSize, $maxSize) {
+    @media screen and (min-width: $minSize) and (max-width:$maxSize) {
+
+        //@content allows me to input different settings for each media query
+        @content;
+    }
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    height: auto;
+    width: 100%;
+    background-color: $h;
+}
+
+// 400px
+.img1 {
+    display: flex;
+    width: 400px;
+    margin: auto;
+
+    //The image is set to this setting when the parameter conditions are met 
+    @include mediaQuery(0px, 800px) {
+
+        //at this specific parameter the image will be hidden
+        display: none;
+    }
+}
+
+// 300px
+.img2 {
+
+    //The image stays hidden till the @mixin with the parameter is called 
+    display: none;
+
+    //The image is set to this setting when the parameter conditions are met  
+    @include mediaQuery(481px, 800px) {
+        display: flex;
+        width: 300px;
+        margin: auto;
+    }
+}
+
+// 200px
+.img3 {
+
+    //The image stays hidden till the @mixin with the parameter is called 
+    display: none;
+
+    //The image is set to this setting when the parameter conditions are met  
+    @include mediaQuery(0px, 481px) {
+        display: flex;
+        width: 200px;
+        margin: auto;
+    }
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.line {
+    //This makes the items go vertically 
+    flex-direction: column;
+    display: flex;
+    height: 40px;
+    width: 100%;
+
+    //When the cursor passes by the item, the hover effect changes its color
+    &:hover {
+        background-color: #444;
+    }
+
+}
+
+
+.line1 {
+
+    // The .line properties are called without having to rewrite the codes
+    @extend .line;
+    //this also allows you to extend the code further
+
+    background-color: $c1;
+
+}
+
+.line2 {
+    // The .line properties are called without having to rewrite the codes
+    @extend .line;
+    //this also allows you to extend the code further
+
+    background-color: $c2;
+}
+
+.line3 {
+    // The .line properties are called without having to rewrite the codes
+    @extend .line;
+    //this also allows you to extend the code further
+
+    background-color: $c3;
+}
+
+.line4 {
+
+    // The .line properties are called without having to rewrite the codes
+    @extend .line;
+    //this also allows you to extend the code further
+
+    background-color: $c4;
+
+}
+
+.dots {
+
+    // @include calls the @mixin
+    @include align();
+    margin: auto;
+    gap: 10px;
+    flex-direction: row;
+
+    //The circles are set to this setting when the parameter conditions are met 
+    @include mediaQuery(0px, 620px) {
+        flex-direction: column;
+    }
+
+}
+
+.dot {
+
+    //When the cursor passes by the item, the hover effect changes its color
+    &:hover {
+        background-color: #444;
+    }
+}
+
+//Each circle is given a specific size as shown in the heights and widths of each selector
+
+
+// 70px
+.dot1 {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: $c1;
+}
+
+// 80px
+.dot2 {
+
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: $c2;
+
+}
+
+// 90px
+.dot3 {
+
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: $c3;
+
+}
+
+// 100px
+.dot4 {
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: $c4;
+
+}
+
+//this the footer of the page 
+footer {
+    height: 50px;
+    width: 100%;
+    margin-top: 25px;
+    background-color: $h;
+}

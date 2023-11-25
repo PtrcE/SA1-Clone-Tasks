@@ -1,0 +1,210 @@
+.navbar {
+    /* this is the background color */
+    background-color: #0096FF;
+    /* to use flex box layout*/
+    display: flex;
+    /* this is to put spaces between each item*/
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    /* to add spaces between content and border*/
+    padding-left: 20px;
+    padding-right: 25px;
+
+}
+
+.whats_on {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffff;
+}
+
+/* this is the search box in the navabr*/
+.search input {
+    font-size: 10px;
+    width: 240px;
+    height: 26px;
+
+}
+
+.section {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section a {
+    /*adds space from the left side */
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-family: sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+button {
+    color: #ffff;
+    background-color: #0096FF;
+    /* removes shadow from the borderline of the button*/
+    box-shadow: none;
+    /* removes the border of the button  */
+    border: none;
+    width: 80px;
+    height: 25px;
+    /* gives the border of the button some rounded edges */
+    border-radius: 4px;
+    font-size: 10px;
+    margin-left: auto;
+
+}
+
+.movies {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    /* to use flex box layout*/
+    display: flex;
+    float: right;
+    margin-right: 55px;
+
+}
+
+.row1 {
+    margin-right: 10px;
+}
+
+.row2 {
+    margin-right: 100px;
+    padding-bottom: 60px;
+
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #757d83;
+    padding-bottom: 50px;
+}
+
+
+.avengers {
+    /* border color */
+    border: 0.5px solid #ccc;
+    /* Box shadow*/
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    /* adds space inside the border */
+    padding: 20px;
+    /* to use flex-box layout  */
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    max-width: 600px;
+    margin-top: 20px;
+    margin-left: 165px;
+
+}
+
+.avengers img {
+    height: 500px;
+    width: 600px;
+    display: block;
+
+}
+
+.lone-gunmen {
+    /* border color */
+    border: 0.5px solid #ccc;
+    /* Box shadow */
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    /* space inside the border */
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-left: auto;
+    height: 500px;
+
+
+}
+
+.lone-gunmen img {
+    height: 250px;
+    width: 170px;
+    padding-left: 15px;
+}
+
+.predators {
+    /* border color */
+    border: 0.5px solid #ccc;
+    /* adds border shadow */
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    /* adds space inside the border */
+    padding: 10px;
+    /* to use flex-box layout */
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-left: auto;
+    height: 500px;
+}
+
+.predators img {
+    height: 250px;
+    width: 170px;
+    padding-left: 15px;
+}
+
+.millennium {
+    /* border color */
+    border: 0.5px solid #ccc;
+    /* adds box shadow */
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-left: auto;
+    height: 500px;
+    margin-top: 10px;
+
+
+}
+
+.millennium img {
+    height: 250px;
+    width: 170px;
+    padding-left: 15px;
+}
+
+.rage {
+
+    border: 0.5px solid #ccc;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-left: auto;
+    height: 500px;
+    margin-top: 10px;
+
+}
+
+.rage img {
+    height: 250px;
+    width: 170px;
+    padding-left: 15px;
+}
+
+footer {
+    position: absolute;
+    bottom: -420px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,100 @@
+/*  */
+body {
+    /* imported fonts */
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Space Mono', monospace;
+    /* to remove all default margins and paddings */
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    height: 0;
+}
+
+header {
+    background-color: #ffffff;
+    /* padding is set to 10px */
+    padding: 10px;
+    /*  to align the text in center */
+    text-align: center;
+}
+
+.logo {
+    /* this is to move the margin 100px from the right */
+    margin-right: 100px;
+    max-width: 100px;
+    max-height: 80px;
+}
+
+
+.row {
+    /* to use flex-box layout */
+    display: flex;
+    /* flex-wrap controls items in the container */
+    flex-wrap: wrap;
+    margin: 0;
+    /* this aligns items horizontally */
+    justify-content: center;
+}
+
+.img {
+    /* this is to set the initial size  */
+    flex-basis: 50%;
+    display: block;
+}
+
+.img img {
+    width: 100%;
+}
+
+
+
+/* 1024px Desktop */
+@media screen and (min-width: 1024px) {
+
+    .img {
+        /* inital size for media screen size */
+        flex-basis: 33.3%;
+    }
+
+}
+
+
+/* 800px Tablet*/
+@media screen and (max-width: 1023px) {
+
+    .row {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .img {
+        /* inital size for media screen size */
+        flex-basis: 50%;
+    }
+
+}
+
+/* 480px Mobile Phones*/
+@media screen and (max-width: 768px) {
+
+    .row1 {
+        display: inline;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .img {
+        /* inital size for media screen size */
+        flex-basis: 100%;
+    }
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
